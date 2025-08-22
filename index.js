@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Replace with your MongoDB Atlas connection string
-const mongoURI = process.env.MONGO_URI || 'mongodb+srv://varshith:varshith@cluster0.hkcheb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const mongoURI = process.env.MONGO_URI || "mongodb+srv://varshith:varshith@cluster0.hkcheb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 // Connect to MongoDB
 mongoose.connect(mongoURI, {
@@ -51,3 +51,4 @@ app.post('/submit', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
