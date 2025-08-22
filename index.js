@@ -41,15 +41,30 @@ app.post('/submit', (req, res) => {
 
   const submission = new Submission({ name, email });
   submission.save()
-    .then(() => res.send(`Thank you, ${name}! Your data has been saved.`))
+    .then(() => {
+      // Check if name and email match your criteria
+      if (name === 'Cutie' && email === 'cutie@gmail.com') {
+        // Send HTML response with the image
+        res.send(`
+          <h2>Welcome, ${name}!</h2>
+          <p>Your data has been saved.</p>
+          <img src="https://example.com/path-to-your-image.jpg" alt="Special Image" style="max-width:300px;">
+        `);
+      } else {
+        // Default response for other entries
+        res.send(`Thank you, ${name}! Your data has been saved.`);
+      }
+    })
     .catch(err => {
       console.error(err);
       res.status(500).send('Error saving data.');
     });
 });
 
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
 
 
