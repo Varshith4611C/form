@@ -47,7 +47,7 @@ app.post('/submit', (req, res) => {
         // Send HTML response with the image
         res.send(`
           <h2>Welcome, ${name}!</h2>
-          <p>Your data has been saved.</p>
+          <p>I LOVE YOU.</p>
           <img src="Screenshot_20250314_154933.jpg" alt="Special Image" style="max-width:300px;">
         `);
       } else {
@@ -65,6 +65,7 @@ app.post('/submit', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
 
 
 
