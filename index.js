@@ -48,7 +48,7 @@ app.post('/submit', (req, res) => {
         res.send(`
           <h2>Welcome, ${name}!</h2>
           <p>I LOVE YOU.</p>
-          <img src="Screenshot_20250314_154933.jpg" alt="Special Image" style="max-width:300px;">
+          <img src="https://varshith4611c.github.io/ashu.com/Screenshot_20250314_154933.jpg" alt="Special Image" style="max-width:300px;">
         `);
       } else {
         // Default response for other entries
@@ -65,6 +65,7 @@ app.post('/submit', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
 
 
 
